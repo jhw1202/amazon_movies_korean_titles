@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "[your extension name here]",
+  "description": "[your extension description here]",
+  "version": "0.1",
+   "permissions": [
+    "https://en.wikipedia.org/*",
+    "tabs",
+    "webRequest",
+    "debugger"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.amazon.com/*",
+        "https://www.amazon.com/*"
+      ],
+      "js": [
+        "jquery.js",
+        "lodash.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
